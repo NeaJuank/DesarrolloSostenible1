@@ -245,7 +245,9 @@ header nav ul li a:hover, header nav ul li a:focus {
     transition: background-color 0.3s ease;
 }
 
-#contact:hover {
+
+
+#container:hover {
     background-color: #e1f4e3; /* Cambio de fondo suave al pasar el ratón */
 }
 
@@ -280,8 +282,8 @@ header nav ul li a:hover, header nav ul li a:focus {
     font-size: 1.1rem;
 }
 
-#contact input,
-#contact textarea {
+#contact-container input,
+#contact-container textarea {
     width: 100%;
     padding: 14px;
     font-size: 1.1rem;
@@ -292,13 +294,13 @@ header nav ul li a:hover, header nav ul li a:focus {
     transition: border-color 0.3s ease;
 }
 
-#contact input:focus,
-#contact textarea:focus {
+#contact-container input:focus,
+#contact-container textarea:focus {
     border-color: #28a745;
     outline: none;
 }
 
-#contact button {
+#contact-container button {
     width: 100%;
     padding: 14px;
     font-size: 1.2rem;
@@ -310,14 +312,18 @@ header nav ul li a:hover, header nav ul li a:focus {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+contact-container{
+
+ margin-top: 30px;
+ padding: 10px;
+}
+
 #contact button:hover {
     background-color: #218838;
     transform: translateY(-3px);
 }
 
-#contact div {
-    margin-top: 40px;
-}
+
 
 #contact h3 {
     font-size: 1.8rem;
@@ -608,3 +614,5 @@ footer:before {
     height: 2px;
     background-color: #28a745; /* Línea verde para separar */
 }
+
+

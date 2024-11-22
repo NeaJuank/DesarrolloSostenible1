@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contactus.css">
 </head>
 <body>
     <header>
@@ -39,24 +40,42 @@
         </ul>
      </section>
     
-     <section id="contact">
-        <h2>Contacto</h2>
-        <form action="submit_contact.php" method="POST">
-           <label for="name">Nombre</label>
-           <input type="text" id="name" name="name" required>
-           <label for="email">Correo Electrónico</label>
-           <input type="email" id="email" name="email" required>
-           <label for="message">Mensaje</label>
-           <textarea id="message" name="message" required></textarea>
-           <button type="submit">Enviar</button>
-        </form>
-        <div>
-           <h3>Dirección</h3>
-           <p>123 Calle Ecológica, Ciudad Verde</p>
-           <h3>Teléfono</h3>
-           <p>+123 456 789</p>
+     <!-- Contacto -->
+     <div id="container-back">
+            <div id="contact-container">
+                <div class="form-container">
+                    <h2 style="margin-bottom: 20px;
+                    color: #333; ">Contacto</h2>
+                    
+                    <form 
+                        action="https://formspree.io/f/mkgnzbdn"
+                        method="POST">
+            
+                        <label for="nombre">Nombre *</label><br>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+            
+                        <label for="email">Correo Electrónico *</label><br>
+                        <input type="email" name="correo" id="correo" placeholder="Ingresa tu Correo Electrónico" required>
+                        
+                        <label for="telefono">Teléfono *</label><br>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Ingresa tu teléfono" required>
+            
+                        <label for="mensaje">Mensaje *</label><br>
+                        <textarea name="mensaje" id="mensaje" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
+                        <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+            
+                        <input type="text" name="_honey" style="display:none">
+                    </form>
+                </div>
+            
+                <div class="image-container"></div>
+            </div>
         </div>
-     </section>
+    
+        <div class="image-container"></div>
+    </div>
+        </div>
+     
     
      <section id="social-media">
         <h2>Conéctate con nosotros</h2>
