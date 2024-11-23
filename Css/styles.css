@@ -57,7 +57,7 @@ header nav ul li {
 
 header nav ul li a {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -651,7 +651,7 @@ footer:before {
 }
 
 #home h1 {
-    font-size: 2rem; /* Titulo principal */
+    font-size: 3rem; /* Titulo principal */
     margin-bottom: 10px;
 }
 
