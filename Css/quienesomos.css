@@ -62,6 +62,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 30px;
 }
 
 #quienes-somos .text {
@@ -70,7 +71,7 @@ body {
 }
 
 #quienes-somos .text h2 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -85,9 +86,11 @@ body {
 }
 
 #quienes-somos .image img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 8px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Sección "Misión" */
@@ -103,6 +106,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 30px;
 }
 
 #mision .text {
@@ -111,7 +115,7 @@ body {
 }
 
 #mision .text h2 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -126,10 +130,13 @@ body {
 }
 
 #mision .image img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 8px;
+    display: block;
+    margin: 0 auto;
 }
+
 /* Sección "Visión" */
 #vision {
     background-color: #fff;
@@ -143,6 +150,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 30px;
 }
 
 #vision .text {
@@ -151,7 +159,7 @@ body {
 }
 
 #vision .text h2 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -166,9 +174,11 @@ body {
 }
 
 #vision .image img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 8px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Sección "Servicios" */
@@ -185,22 +195,24 @@ body {
 
 .services-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .service {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px;
     width: 30%;
-    margin: 20px;
+    min-width: 280px;
     text-align: center;
+    margin: 20px 0;
 }
 
 .service img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
