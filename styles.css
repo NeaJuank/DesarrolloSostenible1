@@ -634,3 +634,85 @@ footer:before {
 }
 
 
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+#home h1 {
+    font-size: 2rem; /* Titulo principal */
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1rem; /* Subtitulo */
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Buttons container */
+#buttons-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que los botones se acomoden en diferentes filas si es necesario */
+}
+
+#buttons-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buttons-container button#calculate {
+    background-color: #28a745;
+    color: white;
+}
+
+#buttons-container button#calculate:hover {
+    background-color: #218838;
+}
+
+#buttons-container button#join {
+    background-color: #28a745;
+    color: white;
+}
+
+#buttons-container button#join:hover {
+    background-color: #218838;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 1.5rem;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+    }
+
+    #buttons-container button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #buttons-container {
+        flex-direction: column; /* Botones apilados verticalmente */
+    }
+
+    #buttons-container button {
+        width: 100%; /* Los botones ocupan toda la pantalla */
+        max-width: 300px; /* Limitar el ancho máximo */
+        margin: 5px 0; /* Espacio entre botones */
+    }
+}
+
