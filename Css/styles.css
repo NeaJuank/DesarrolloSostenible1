@@ -353,109 +353,76 @@ contact-container{
 #social-media {
     padding: 50px 20px;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    box-shadow: 0 10px 20px rgba(0, 128, 64, 0.2), inset 0 0 10px rgba(0, 128, 64, 0.1);
+    border-radius: 15px;
+    border: 2px solid rgba(39, 174, 96, 0.3);
+    transition: background 0.5s ease, transform 0.3s ease;
 }
 
+#social-media:hover {
+    background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 128, 64, 0.25), inset 0 0 15px rgba(0, 128, 64, 0.15);
+}
+
+/* Título principal */
 #social-media h2 {
-    font-size: 2.6rem;
-    color: #2c3e50;
+    font-size: 2.8rem;
+    color: #1b5e20;
     margin-bottom: 30px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 2px 2px 8px rgba(0, 128, 64, 0.3);
 }
 
+/* Detalle animado en el título */
+#social-media h2::after {
+    content: "🌍";
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Enlaces a redes sociales */
 #social-media a {
     font-size: 1.8rem;
     color: #28a745;
     text-decoration: none;
     margin: 0 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px 15px;
+    border: 2px solid rgba(39, 174, 96, 0.3);
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    display: inline-block;
+    background: rgba(232, 245, 233, 0.5);
 }
 
 #social-media a:hover {
-    color: #218838;
-    transform: translateY(-3px);
+    color: #ffffff;
+    background: #218838;
+    border-color: #218838;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(33, 136, 56, 0.3);
 }
 
-/* Sección de Registro */
-#register {
-    padding: 60px 20px;
-    background-color: #f7f9fc;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
 
-#register:hover {
-    background-color: #e1f4e3;
-}
 
-#register h2 {
-    font-size: 2.6rem;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-#register form {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-#register label {
-    display: block;
-    margin-bottom: 12px;
-    color: #555;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-#register input {
-    width: 100%;
-    padding: 14px;
-    font-size: 1.1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-#register input:focus {
-    border-color: #28a745;
-    outline: none;
-}
-
-#register button {
-    width: 100%;
-    padding: 14px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #28a745;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#register button:hover {
-    background-color: #218838;
-    transform: translateY(-3px);
-}
 
 /* Sección de Huella Ecológica */
 #ecological-footprint {
@@ -532,43 +499,83 @@ contact-container{
 /* Sección de Retos Sostenibles */
 #challenges {
     padding: 50px 20px;
-    background-color: #fff;
+    background: linear-gradient(135deg, #f0fff4, #ffffff);
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 128, 64, 0.2), inset 0 0 10px rgba(0, 128, 64, 0.1);
+    border: 2px solid rgba(39, 174, 96, 0.3);
+    transition: transform 0.3s ease, background 0.5s ease;
 }
 
+#challenges:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #e8f5e9, #f0fff4);
+    box-shadow: 0 15px 30px rgba(0, 128, 64, 0.25), inset 0 0 15px rgba(0, 128, 64, 0.15);
+}
+
+/* Título de la sección */
 #challenges h2 {
-    font-size: 2.6rem;
-    color: #2c3e50;
+    font-size: 2.8rem;
+    color: #1b5e20;
     margin-bottom: 30px;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 2px 2px 8px rgba(0, 128, 64, 0.3);
 }
 
+/* Estilo para la lista */
 #challenges ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 #challenges ul li {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    color: #555;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #4d4d4d;
+    font-weight: 600;
+    background: rgba(232, 245, 233, 0.6);
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Icono decorativo al inicio de cada elemento */
+#challenges ul li::before {
+    content: "🌱";
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #28a745;
+}
+
+/* Enlaces dentro de la lista */
 #challenges ul li a {
     color: #28a745;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-weight: 700;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 #challenges ul li a:hover {
-    color: #218838;
+    color: #ffffff;
+    text-shadow: 0px 0px 8px #28a745;
+    background-color: #218838;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Animación de movimiento al pasar el mouse */
+#challenges ul li:hover {
+    transform: translateY(-5px);
+    background: rgba(216, 239, 216, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 128, 64, 0.3);
 }
 
 
