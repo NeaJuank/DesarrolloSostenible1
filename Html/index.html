@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contactus.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/Css/styles.css">
+    <link rel="stylesheet" href="/Css/contactus.css">
+    <link rel="stylesheet" href="/Css/navbar.css">
+    <link rel="stylesheet" href="/Css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
+  <div id="principioid"></div>
     <header>
         <nav>
            <ul>
-              <li><a href="#home">Inicio</a></li>
+              <li><a href="#principioid">Inicio</a></li>
               <li><a href="#servicesid">Servicios</a></li>
               <li><a href="quienes_somos.html" target="_blank">Comunidad</a></li>
               <li><a href="#contactoid">Contacto</a></li>
@@ -82,44 +83,9 @@
         <div id="contactoid"></div>
      </section>
     
-     <!-- Contacto -->
-      
-     <div id="container-back">
-            <div id="contact-container">
-                <div class="form-container">
-                    <h2 style="margin-bottom: 20px;
-                    color: #333; ">Contacto</h2>
-                    
-                    <form 
-                        action="https://formspree.io/f/mkgnzbdn"
-                        method="POST">
-            
-                        <label for="nombre">Nombre *</label><br>
-                        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
-            
-                        <label for="email">Correo Electrónico *</label><br>
-                        <input type="email" name="correo" id="correo" placeholder="Ingresa tu Correo Electrónico" required>
-                        
-                        <label for="telefono">Teléfono *</label><br>
-                        <input type="tel" name="telefono" id="telefono" placeholder="Ingresa tu teléfono" required>
-            
-                        <label for="mensaje">Mensaje *</label><br>
-                        <textarea name="mensaje" id="mensaje" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
-                        <input type="submit" value="Enviar Mensaje" class="btn-enviar">
-            
-                        <input type="text" name="_honey" style="display:none">
-                    </form>
-                </div>
-            
-                <div class="image-container"></div>
-            </div>
-        </div>
-    
-        <div class="image-container"></div>
-    </div>
-        </div>
      
-    
+     
+     <div class="image-container"></div>
      <section id="social-media">
         <h2>Conéctate con nosotros</h2>
         <a href="https://www.facebook.com/share/g/18S3xXMkoW/" target="_blank">Facebook</a>
@@ -228,6 +194,43 @@
            <li>Reciclar correctamente - Meta: 100% reciclado</li>
         </ul>
      </section>
+
+     <!-- Contacto -->
+      
+     <div id="container-back">
+      <div id="contact-container">
+          <div class="form-container">
+              <h2 style="margin-bottom: 20px;
+              color: #333; ">Contacto</h2>
+              
+              <form 
+                  action="https://formspree.io/f/mkgnzbdn"
+                  method="POST">
+      
+                  <label for="nombre">Nombre *</label><br>
+                  <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+      
+                  <label for="email">Correo Electrónico *</label><br>
+                  <input type="email" name="correo" id="correo" placeholder="Ingresa tu Correo Electrónico" required>
+                  
+                  <label for="telefono">Teléfono *</label><br>
+                  <input type="tel" name="telefono" id="telefono" placeholder="Ingresa tu teléfono" required>
+      
+                  <label for="mensaje">Mensaje *</label><br>
+                  <textarea name="mensaje" id="mensaje" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
+                  <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+      
+                  <input type="text" name="_honey" style="display:none">
+              </form>
+          </div>
+      
+          <div class="image-container"></div>
+      </div>
+  </div>
+
+  
+</div>
+  </div>
      
      
 
@@ -239,17 +242,17 @@
           </div>
           <div class="footer-links">
             <ul>
-              <li><a href="#">Política de Privacidad</a></li>
-              <li><a href="#">Términos de Servicio</a></li>
-              <li><a href="#">Sobre Nosotros</a></li>
-              <li><a href="#">Contáctanos</a></li>
+              <li><a href="politica_priv.html">Política de Privacidad</a></li>
+              <li><a href="Terminosservicio.html">Términos de Servicio</a></li>
+              <li><a href="quienes_somos.html">Sobre Nosotros</a></li>
+              <li><a href="#contactoid">Contáctanos</a></li>
             </ul>
           </div>
           <div class="footer-social">
             <p>Síguenos en:</p>
-            <a href="#https://www.facebook.com/share/g/18S3xXMkoW/">Facebook</a> | 
-            <a href="#https://www.x.com">Twitter</a> | 
-            <a href="#https://www.instagram.com">Instagram</a>
+            <a href="https://www.facebook.com/share/g/18S3xXMkoW/">Facebook</a> | 
+            <a href="https://www.x.com">Twitter</a> | 
+            <a href="https://www.instagram.com">Instagram</a>
           </div>
         </div>
         <div class="footer-bottom">
