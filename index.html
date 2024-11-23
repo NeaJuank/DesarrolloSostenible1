@@ -15,7 +15,7 @@
               <li><a href="#home">Inicio</a></li>
               <li><a href="#services">Servicios</a></li>
               <li><a href="quienes_somos.html" target="_blank">Comunidad</a></li>
-              <li><a href="#contact">Contacto</a></li>
+              <li><a href="#contactoid">Contacto</a></li>
            </ul>
         </nav>
      </header>
@@ -27,9 +27,10 @@
         <h1>Bienvenido a nuestra pagina de Sostenibilidad</h1>
         <p>Calcula tu huella ecológica y empieza a hacer cambios positivos para el planeta.</p>
         <div id="buttons-container">
-            <button id="calculate">Calcular huella ecológica</button>
+         <button id="calculate" onclick="window.location.href='#ecological-footprint'">Calcular huella ecológica</button>
+
             <button id="join" onclick="window.location.href='https://www.undp.org/es/sustainable-development-goals';">
-               Unirte a la comunidad
+               Saber mas
            </button>
         </div>
         
@@ -70,9 +71,11 @@
            <li>Participar en retos ecológicos</li>
            <li>Recursos y consejos sostenibles</li>
         </ul>
+        <div id="contactoid"></div>
      </section>
     
      <!-- Contacto -->
+      
      <div id="container-back">
             <div id="contact-container">
                 <div class="form-container">
@@ -111,7 +114,7 @@
     
      <section id="social-media">
         <h2>Conéctate con nosotros</h2>
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.facebook.com/share/g/18S3xXMkoW/" target="_blank">Facebook</a>
         <a href="https://www.twitter.com" target="_blank">Twitter</a>
         <a href="https://www.instagram.com" target="_blank">Instagram</a>
      </section>
@@ -124,7 +127,7 @@
               <label for="transport">¿Qué medio de transporte usas más frecuentemente?</label>
               <select id="transport" name="transport">
                   <option value="car">Coche</option>
-                  <option value="motorcycle">Motocicleta</option>
+                  <option value="moto">Moto</option>
                   <option value="bus">Autobús</option>
                   <option value="bike">Bicicleta</option>
                   <option value="walking">A pie</option>
@@ -177,7 +180,7 @@
 
           // Transporte
           const transportImpact = {
-              car: 2.3, motorcycle: 1.7, bus: 0.8, bike: 0, walking: 0
+              car: 2.3, moto: 1.7, bus: 0.8, bike: 0, walking: 0
           };
           footprint += (transportImpact[transport] || 0) * frequency * 4;
 
@@ -232,14 +235,31 @@
      </section>
 
      <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Sostenibilidad App. Todos los derechos reservados.</p>
-            <ul>
-                <li><a href="#privacy-policy">Política de Privacidad</a></li>
-                <li><a href="#terms-of-service">Términos de Servicio</a></li>
-            </ul>
-        </div>
-    </footer>
+      <div class="footer-content">
+          <div class="footer-logo">
+              <h3>Sostenibilidad Eco</h3>
+              <p>Juntos por un futuro más verde y sostenible.</p>
+          </div>
+          <div class="footer-links">
+              <ul>
+                  <li><a href="#privacy-policy">Política de Privacidad</a></li>
+                  <li><a href="#terms-of-service">Términos de Servicio</a></li>
+                  <li><a href="#about-us">Sobre Nosotros</a></li>
+                  <li><a href="#contact">Contáctanos</a></li>
+              </ul>
+          </div>
+          <div class="footer-social">
+              <p>Síguenos en:</p>
+              <a href="https://www.facebook.com/share/g/18S3xXMkoW/" target="_blank">Facebook</a> | 
+              <a href="https://twitter.com" target="_blank">Twitter</a> | 
+              <a href="https://instagram.com" target="_blank">Instagram</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Sostenibilidad Eco. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+  
     
     
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
