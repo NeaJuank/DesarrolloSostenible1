@@ -28,7 +28,9 @@
         <p>Calcula tu huella ecológica y empieza a hacer cambios positivos para el planeta.</p>
         <div id="buttons-container">
             <button id="calculate">Calcular huella ecológica</button>
-            <button id="join">Unirte a la comunidad</button>
+            <button id="join" onclick="window.location.href='https://www.undp.org/es/sustainable-development-goals';">
+               Unirte a la comunidad
+           </button>
         </div>
         
      </section>
@@ -115,19 +117,97 @@
      </section>
     
      <section id="ecological-footprint">
-        <h2>Calcula tu huella ecológica</h2>
-        <form>
-           <label for="transport">¿Qué medio de transporte usas?</label>
-           <select id="transport">
-              <option value="car">Coche</option>
-              <option value="bike">Bicicleta</option>
-              <option value="bus">Autobús</option>
-           </select>
-           <label for="energy">¿Cuánta electricidad consumes al mes?</label>
-           <input type="number" id="energy" name="energy">
-           <button type="submit">Calcular</button>
-        </form>
-     </section>
+      <h2>Calcula tu huella ecológica</h2>
+      <form id="footprint-form">
+          <fieldset>
+              <legend>Transporte</legend>
+              <label for="transport">¿Qué medio de transporte usas más frecuentemente?</label>
+              <select id="transport" name="transport">
+                  <option value="car">Coche</option>
+                  <option value="motorcycle">Motocicleta</option>
+                  <option value="bus">Autobús</option>
+                  <option value="bike">Bicicleta</option>
+                  <option value="walking">A pie</option>
+              </select>
+              <label for="frequency">¿Cuántos días a la semana lo usas?</label>
+              <input type="number" id="frequency" name="frequency" min="0" max="7" placeholder="Por ejemplo: 5">
+          </fieldset>
+
+          <fieldset>
+              <legend>Electricidad</legend>
+              <label for="energy">¿Cuánta electricidad consumes al mes (en kWh)?</label>
+              <input type="number" id="energy" name="energy" placeholder="Por ejemplo: 200">
+              <label for="energy-source">¿De dónde proviene la electricidad?</label>
+              <select id="energy-source" name="energy-source">
+                  <option value="renewable">Renovable</option>
+                  <option value="non-renewable">No renovable</option>
+                  <option value="mixed">Mixta</option>
+              </select>
+          </fieldset>
+
+          <fieldset>
+              <legend>Residuos</legend>
+              <label for="waste">¿Cuántos kg de residuos generas semanalmente?</label>
+              <input type="number" id="waste" name="waste" placeholder="Por ejemplo: 5">
+              <label for="recycling">¿Reciclas tus residuos?</label>
+              <select id="recycling" name="recycling">
+                  <option value="always">Siempre</option>
+                  <option value="sometimes">A veces</option>
+                  <option value="never">Nunca</option>
+              </select>
+          </fieldset>
+
+          <button type="button" onclick="calculateFootprint()">Calcular</button>
+      </form>
+      <div id="results"></div>
+  </section>
+
+  <script>
+      function calculateFootprint() {
+          // Obtener valores del formulario
+          const transport = document.getElementById('transport').value;
+          const frequency = parseInt(document.getElementById('frequency').value || 0);
+          const energy = parseFloat(document.getElementById('energy').value || 0);
+          const energySource = document.getElementById('energy-source').value;
+          const waste = parseFloat(document.getElementById('waste').value || 0);
+          const recycling = document.getElementById('recycling').value;
+
+          // Estimar impacto de cada factor (valores aproximados)
+          let footprint = 0;
+
+          // Transporte
+          const transportImpact = {
+              car: 2.3, motorcycle: 1.7, bus: 0.8, bike: 0, walking: 0
+          };
+          footprint += (transportImpact[transport] || 0) * frequency * 4;
+
+          // Electricidad
+          const energyImpact = energySource === 'renewable' ? 0.1 : energySource === 'mixed' ? 0.5 : 1;
+          footprint += energy * energyImpact;
+
+          // Residuos
+          const recyclingImpact = recycling === 'always' ? 0.5 : recycling === 'sometimes' ? 0.8 : 1;
+          footprint += waste * 4 * recyclingImpact;
+
+          // Comparaciones
+          const trees = (footprint / 21).toFixed(1); // 21 kg CO2 absorbidos por árbol al año
+          const bottles = (footprint / 0.5).toFixed(0); // 0.5 kg CO2 por botella de plástico
+
+          // Mostrar resultados
+          const resultsDiv = document.getElementById('results');
+          resultsDiv.innerHTML = `
+              <h3>Tu huella ecológica estimada:</h3>
+              <p><strong>${footprint.toFixed(2)} kg CO₂e por mes.</strong></p>
+              <h4>Comparaciones:</h4>
+              <p>Esto equivale a lo siguiente:</p>
+              <ul>
+                  <li>🌳 Necesitarías plantar <strong>${trees} árboles</strong> para absorber esta cantidad de CO₂ en un año.</li>
+                  <li>🧴 Es similar a la energía generada por producir <strong>${bottles} botellas de plástico</strong> de 1 litro.</li>
+              </ul>
+              <p>¡Considera formas de reducir tu huella para proteger el planeta!</p>
+          `;
+      }
+  </script>
 
      <section id="challenges">
         <h2>Retos sostenibles</h2>

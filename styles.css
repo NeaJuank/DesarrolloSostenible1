@@ -7,6 +7,24 @@ body {
     color: #333;
 }
 
+#join,#calculate{
+    z-index: 101;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f7ef;
+    border: 1px solid #d4edda;
+    border-radius: 8px;
+    color: #155724;
+}
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style:none
+}
+
 /* Encabezado y Navegación */
 header {
     background-color: #28a745;
